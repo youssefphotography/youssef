@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #26282B;
+            color: #5F85DB;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #353941;
+            color: #5F85DB;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #90B8F8;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 18px; 
+        }
+
+        nav ul li a:hover {
+            background-color: #5F85DB;
+            border-radius: 5px;
+        }
+
+        .contact-me-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contact-me-content {
+            background-color: #353941;
+            color: #90B8F8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .contact-me-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-me-content a {
+            display: block;
+            color: #90B8F8;
+            text-decoration: none;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #90B8F8;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .contact-me-content a:hover {
+            background-color: #5F85DB;
+            color: #fff;
+            border-color: #5F85DB;
+        }
+
+        footer {
+            background-color: #353941;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Youssef Photography</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>    
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contact-me-page">
+        <div class="contact-me-content">
+            <h2>Contact Me</h2>
+            <a href="mailto:your.email@example.com">Email: your.email@example.com</a>
+            <a href="https://www.instagram.com/your_instagram_handle/">Instagram: @your_instagram_handle</a>
+            <a href="tel:+1234567890">Phone: +1 (234) 567-890</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

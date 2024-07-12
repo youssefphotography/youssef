@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MJS - Youssef Photography</title>
+    <title>Watch - Youssef Photography</title>
     <link rel="icon" href="ico.ico" type="image/x-icon">
 
     <style>
@@ -29,7 +29,7 @@
             padding: 20px;
             display: flex;
             align-items: center;
-            justify-content: center; /* Center items */
+            justify-content: center; /* Align items with space between */
             position: relative;
         }
 
@@ -82,14 +82,14 @@
         }
 
         section {
-            margin-top: -10px; /* تقليل الهامش العلوي */
-            margin-bottom: 30px; /* زيادة الهامش السفلي *//* Adjust margin as needed */
+            margin-top: -20px;
+            margin-bottom: 40px; /* Adjust margin as needed */
         }
 
         .project-photos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
             justify-content: center;
         }
 
@@ -99,14 +99,17 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: #26282B; /* Add background color to project-photo */
         }
 
         .project-photo img {
-            max-width: 100%;
+            width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensure image covers the container without stretching */
+            object-fit: cover;
             transition: transform 0.3s ease;
+        }
+
+        .project-photo.paysage {
+            grid-column: span 2; /* Span 2 columns for landscape images */
         }
 
         .project-photo:hover {
@@ -146,6 +149,7 @@
 
         /* Adjusted style for Project section */
         #project1 h2 {
+            margin-top: 20px;
             margin-bottom: 20px; /* Add space under the heading */
         }
     </style>
@@ -166,86 +170,66 @@
 
     <main>
         <section id="project1">
-            <h2>Project 1 - Maison Dar Chabeb</h2>
-                    <div class="project-photos">
-                        <div class="project-photo">
-                            <img src="./images/m5.JPG" alt="Photo 1">
+            <h2>Project : Watch</h2>
+            <div class="project-photos">
 
-                        </div>
-                        <div class="project-photo">
-                            <img src="./images/m4.JPG" alt="Photo 2">
-
-                                                </div>
-            </div>
-        </section>
-    </main>
-                <main>
-                    <section id="project1">
-                                <div class="project-photos">
-                                    <div class="project-photo">
-                                        <img src="./images/m1.JPG" alt="Photo 1">
-
-                                    </div>
-                                    <div class="project-photo">
-                                        <img src="./images/m2.JPG" alt="Photo 2">
-
-                                                            </div>
-                                    <div class="project-photo">
-                                        <img src="./images/m3.JPG" alt="Photo 2">
-
-                                                            </div>
-                                    <div class="project-photo">
-                                        <img src="./images/m6.JPG" alt="Photo 2">
-
-                                                            </div>
-                                    
-
-                        </div>
-                    </section>
-                </main>
-    <main>
-        <section id="project1">
-                    <div class="project-photos">
-                        <div class="project-photo">
-                            <img src="./images/m8.JPG" alt="Photo 1">
-
-                        </div>
-                        <div class="project-photo">
-                            <img src="./images/m9.JPG" alt="Photo 2">
-
-                                                </div>
-                        <div class="project-photo">
-                            <img src="./images/m7.JPG" alt="Photo 2">
-
-                                                </div>
-                       
-
-
+               
+                <div class="project-photo paysage">
+                    <img src="./mix/w8.jpg" alt="Photo 1">
+                </div>
+                <div class="project-photo paysage">
+                    <img src="./mix/w1.jpg" alt="Photo 1">
+                </div>
+                <div class="project-photo paysage">
+                    <img src="./mix/w5.jpg" alt="Photo 1">
+                </div>
+                <!-- Add more photos if needed -->
             </div>
         </section>
     </main>
     <main>
         <section id="project1">
-                    <div class="project-photos">
-                        <div class="project-photo">
-                            <img src="./images/m10.JPG" alt="Photo 1">
+        <div class="project-photos">
+            <div class="project-photo">
+                <img src="./mix/w6.jpg" alt="Photo 2">
+            </div>
+            <div class="project-photo">
+                <img src="./mix/w2.jpg" alt="Photo 2">
+            </div>
 
-                        </div>
-                        <div class="project-photo">
-                            <img src="./images/m12.JPG" alt="Photo 2">
-
-                                                </div>
-                        <div class="project-photo">
-                            <img src="./images/m11.JPG" alt="Photo 2">
-
-                                                </div>
-                        <div class="project-photo">
-                            <img src="./images/m13.JPG" alt="Photo 2">
-
-                                                </div>
-
-
-
+            <div class="project-photo">
+                <img src="./mix/w7.jpg" alt="Photo 2">
+            </div>   <!-- Add more photos if needed -->
+        </div>
+        </section>
+    </main>
+    <main>
+        <section id="project1">
+            <div class="project-photos">
+                <div class="project-photo paysage">
+                    <img src="./mix/w4.jpg" alt="Photo 1">
+                </div>
+                <div class="project-photo paysage">
+                    <img src="./mix/w9.jpg" alt="Photo 1">
+                </div>
+                <div class="project-photo paysage">
+                    <img src="./mix/w3.jpg" alt="Photo 1">
+                </div>
+                <!-- Add more photos if needed -->
+            </div>
+        </section>
+    </main>
+    <main>
+        <section id="project1">
+            <div class="project-photos">
+                <div class="project-photo paysage">
+                    <img src="./mix/w11.jpg" alt="Photo 1">
+                </div>
+                <div class="project-photo paysage">
+                    <img src="./mix/w10.jpg" alt="Photo 1">
+                </div>
+               
+                <!-- Add more photos if needed -->
             </div>
         </section>
     </main>
@@ -255,3 +239,6 @@
     </footer>
 </body>
 </html>
+
+
+

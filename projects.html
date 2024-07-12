@@ -1,54 +1,327 @@
-<section id="hero" style="background-image: url('path/to/your/image.jpg'); background-size: cover; background-position: center;">
-    <div class="hero-content">
-        <h1>Welcome to Youssef Photography World</h1>
-        <a href="#projects" class="cta-button">Explore Projects</a>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youssef Photography</title>
+    <link rel="icon" href="ico.ico" type="image/x-icon">
 
-<style>
-    #hero {
-        height: 400px; /* Adjust height as needed */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-align: center;
-        position: relative;
-    }
+    <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .hero-content {
-        position: relative;
-        z-index: 1;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #26282B;
+            color: #5F85DB;
+            margin: 0;
+            padding: 0;
+        }
 
-    #hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-        z-index: 0;
-    }
+        header {
+            background-color: #353941;
+            color: #5F85DB;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Align items with space between */
+            position: relative;
+        }
 
-    #hero h1 {
-        font-size: 36px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
+        header h1 {
+            margin: 0;
+        }
 
-    .cta-button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #5F85DB;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            display: flex; /* Display inline as a flexbox */
+            justify-content: center; /* Center align navigation items */
+        }
 
-    .cta-button:hover {
-        background-color: #354EA0;
-    }
-</style>
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #90B8F8;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 18px; 
+        }
+
+        nav ul li a:hover {
+            background-color: #5F85DB;
+            border-radius: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: #90B8F8;
+            text-decoration: none;
+            margin-left: 15px; /* Adjust spacing between links */
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #5F85DB;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px; /* Adjust margin as needed */
+        }
+
+        #hero {
+            height: 400px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+            z-index: 0;
+        }
+
+        #hero h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #5F85DB;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #354EA0;
+        }
+        #about {
+            background-color: #353941;
+            color: #90B8F8;
+            padding: 20px;
+        }
+
+        #projects {
+            
+            padding: 20px;
+            text-align: center;
+        }
+        #projects h2 {
+            margin-bottom: 55px; /* Adjust this value to create desired spacing */
+        }
+
+        .project-buttons {
+             margin-top: -30px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+
+        .project-button {
+            position: relative;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            padding-top: 75%; /* Adjust this value for different aspect ratios */
+        }
+
+        .project-button img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-button:hover:before {
+            opacity: 1;
+        }
+
+        .project-button:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-button span {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .contact-me1 {
+            text-align: center;
+            margin: 20px; 
+            margin-top: 40px; 
+           /* Add margin-top for spacing */
+        }
+        .contact-me {
+            text-align: center;
+            margin-top: 20px; /* Add margin-top for spacing */
+        }
+
+        .contact-me a {
+            display: inline-block;
+            color: #90B8F8;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: 2px solid #90B8F8;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .contact-me a:hover {
+
+            background-color: #5F85DB;
+            color: #fff;
+            border-color: #5F85DB;
+        }
+
+        footer {
+            background-color: #353941;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0; /* Ensure footer spans full width on the left */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Youssef Photography</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>    
+                    <li><a href="projects.html">Projects</a></li>
+                     <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-buttons">
+                    <a href="project1.html" class="project-button" target="_blank">
+                        <img src="./images/m5.JPG" alt="Project 1">
+                        <span>Maison de Jeunes Sakiet Ezzit</span>
+                    </a>
+                    <a href="project2.html" class="project-button" target="_blank">
+                        <img src="./tuta/tp.JPG" alt="Project 1">
+                        <span>Tutas Creation</span>
+                    </a>
+                    <a href="project3.html" class="project-button" target="_blank">
+                        <img src="./ibtisem/i2.jpg" alt="Project 2">
+                        <span>Ibtissem Concert</span>
+                    </a>
+                    <a href="project4.html" class="project-button" target="_blank">
+                        <img src="./portrait/PP.JPG" alt="Project 2">
+                        <span>Portrait</span>
+                    </a>
+                   
+                    <!-- Add more project buttons as needed -->
+                </div>
+            </section>
+    <section id="projects">
+
+        <div class="project-buttons">
+            <a href="project5.html" class="project-button" target="_blank">
+                <img src="./yass/y1.jpg" alt="Project 1">
+                <span>Yass Crochet</span>
+            </a>
+            <a href="project6.html" class="project-button" target="_blank">
+                <img src="./mix/w10.jpg" alt="Project 1">
+                <span>Watch</span>
+            </a>
+            <a href="project7.html" class="project-button" target="_blank">
+                <img src="./mix/pr4.jpg" alt="Project 2">
+                <span>Product</span>
+            </a>
+            <a href="project8.html" class="project-button" target="_blank">
+                <img src=".JPG" alt="Project 2">
+                <span>Accessories</span>
+            </a>
+
+            <!-- Add more project buttons as needed -->
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; 2024 Youssef Photography. All rights reserved.</p>
+    </footer>
+</body>
+</html>
